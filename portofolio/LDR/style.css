@@ -1,0 +1,1067 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #182044 0%,
+            #0b1024 35%,
+            #070b18 70%,
+            #050712 100%
+        );
+
+    color: white;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HALAMAN
+========================= */
+
+.page {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(.97);
+
+    transition: 1s ease;
+}
+
+
+.page.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.7);
+}
+
+
+.tiny,
+.label,
+.memory-text > span {
+
+    display: block;
+
+    color: #8996c4;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   JUDUL
+========================= */
+
+h1 {
+    font-size:
+        clamp(38px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #9da8d2
+        );
+
+background-clip: text;
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   PARAGRAF
+========================= */
+
+p {
+    color: #aeb3c4;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+}
+
+
+strong {
+    color: white;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255,255,255,.13);
+
+    box-shadow:
+        0 10px 40px
+        rgba(120,140,255,.15);
+}
+
+
+/* =========================
+   FOTO + TEXT
+========================= */
+
+.memory-page {
+
+    width: min(1050px, 100%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 80px;
+}
+
+
+.memory-page.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.memory-text {
+    width: 45%;
+}
+
+
+.memory-text h1 {
+    font-size:
+        clamp(35px,5vw,58px);
+}
+
+
+/* =========================
+   POLAROID
+========================= */
+
+.photo-card {
+
+    width: 330px;
+
+    padding:
+        14px 14px 22px;
+
+    background: #eeeeea;
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.7);
+
+    transition: .5s ease;
+
+    flex-shrink: 0;
+}
+
+
+.photo-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04);
+}
+
+
+.rotate-left {
+
+    transform:
+        rotate(-5deg);
+}
+
+
+.rotate-right {
+
+    transform:
+        rotate(5deg);
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.caption {
+
+    color: #333;
+
+    font-family:
+        Georgia,
+        serif;
+
+    text-align: center;
+
+    padding-top: 15px;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   3 FOTO
+========================= */
+
+.photo-strip {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 35px 0;
+}
+
+
+.mini-photo {
+
+    width: 150px;
+
+    height: 180px;
+
+    padding: 8px;
+
+    background: #eee;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.5);
+
+    transform:
+        rotate(-7deg);
+
+    z-index: 1;
+}
+
+
+.mini-photo.middle {
+
+    transform:
+        rotate(2deg)
+        translateY(-15px);
+
+    z-index: 2;
+}
+
+
+.mini-photo:last-child {
+
+    transform:
+        rotate(7deg);
+
+    z-index: 1;
+}
+
+
+.mini-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+
+    color: #8996c4;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-style: italic;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.heart {
+
+    font-size: 75px;
+
+    color: #a9b5ff;
+
+    animation:
+        heartbeat 2s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+.signature {
+
+    margin-top: 30px;
+
+    color: #626b84;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MUSIK
+========================= */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 22px;
+    right: 22px;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    z-index: 100;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   BULAN - LEBIH REALISTIS
+========================= */
+
+.moon {
+    position: fixed;
+
+    width: 90px;
+    height: 90px;
+
+    top: 8%;
+    right: 9%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 28%,
+            rgba(80, 84, 110, .35) 0 5px,
+            transparent 6px
+        ),
+        radial-gradient(
+            circle at 65% 38%,
+            rgba(80, 84, 110, .25) 0 8px,
+            transparent 9px
+        ),
+        radial-gradient(
+            circle at 45% 68%,
+            rgba(80, 84, 110, .3) 0 6px,
+            transparent 7px
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            rgba(80, 84, 110, .2) 0 4px,
+            transparent 5px
+        ),
+        #e4e6f2;
+
+    box-shadow:
+        0 0 25px rgba(220, 225, 255, .5),
+        0 0 70px rgba(150, 165, 255, .18);
+
+    opacity: .9;
+
+    z-index: 0;
+}
+
+
+/* Membuat bentuk bulan sabit */
+
+.moon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    top: -8px;
+    left: 20px;
+
+    border-radius: 50%;
+
+    background: #070b18;
+}
+
+
+/* =========================
+   BINTANG LEBIH TERANG
+========================= */
+
+.stars,
+.stars2,
+.stars3 {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            2px 2px at 8% 15%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            2px 2px at 22% 40%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            1.5px 1.5px at 37% 18%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            2px 2px at 52% 72%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            1.5px 1.5px at 68% 28%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            2px 2px at 81% 55%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            1.5px 1.5px at 94% 18%,
+            #ffffff 0,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            2px 2px at 15% 82%,
+            #ffffff 0,
+            transparent 3px
+        );
+
+    background-size: 100% 100%;
+
+    animation:
+        starsTwinkle 4s ease-in-out infinite;
+
+    opacity: .9;
+
+    z-index: 0;
+}
+
+
+/* Lapisan bintang kecil */
+
+.stars2 {
+
+    background-image:
+
+        radial-gradient(
+            1px 1px at 12% 60%,
+            #ffffff,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            1px 1px at 30% 80%,
+            #ffffff,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            1px 1px at 48% 35%,
+            #ffffff,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            1px 1px at 74% 82%,
+            #ffffff,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            1px 1px at 90% 45%,
+            #ffffff,
+            transparent 2px
+        );
+
+    animation-duration: 6s;
+
+    opacity: .6;
+}
+
+
+/* Lapisan bintang berkilau */
+
+.stars3 {
+
+    background-image:
+
+        radial-gradient(
+            3px 3px at 17% 25%,
+            rgba(180,195,255,.9),
+            transparent 4px
+        ),
+
+        radial-gradient(
+            3px 3px at 58% 12%,
+            rgba(180,195,255,.9),
+            transparent 4px
+        ),
+
+        radial-gradient(
+            3px 3px at 88% 75%,
+            rgba(180,195,255,.9),
+            transparent 4px
+        );
+
+    animation-duration: 3s;
+
+    opacity: .7;
+}
+
+
+/* =========================
+   KEDIP BINTANG
+========================= */
+
+@keyframes starsTwinkle {
+
+    0%, 100% {
+        opacity: .65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform:
+            translateY(0);
+    }
+
+    to {
+        transform:
+            translateY(-100px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
+
+    .memory-page,
+    .memory-page.reverse {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+
+    .memory-text {
+
+        width: 100%;
+
+        order: 2;
+    }
+
+
+    .photo-card {
+
+        width: 230px;
+
+        order: 1;
+    }
+
+
+    .photo-card img {
+
+        height: 230px;
+    }
+
+
+    .memory-text h1 {
+
+        font-size: 35px;
+    }
+
+
+    .memory-text p {
+
+        font-size: 14px;
+    }
+
+
+    .content {
+
+        padding:
+            40px 22px;
+    }
+
+
+    .photo-strip {
+
+        transform:
+            scale(.75);
+
+        margin:
+            5px -30px;
+    }
+
+
+    .moon {
+
+        width: 60px;
+
+        height: 60px;
+
+        right: 7%;
+    }
+
+}/* ===== FIX DARK LDR ===== */
+
+html,
+body {
+    background: #070b18 !important;
+    color: #ffffff;
+}
+
+.page {
+    background: transparent !important;
+}
+
+.content {
+    background: rgba(13, 18, 38, 0.72) !important;
+    border: 1px solid rgba(160, 175, 255, 0.12);
+}
+
+.memory-text p,
+.content p {
+    color: #aeb6d0;
+}
+
+.memory-text h1,
+.content h1 {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #aeb9ff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}/* =========================
+   PHOTO ZOOM
+========================= */
+
+.photo-zoom {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(3, 5, 15, .92);
+
+    backdrop-filter: blur(15px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s ease;
+
+    z-index: 9999;
+}
+
+
+.photo-zoom.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.photo-zoom img {
+    max-width: 90vw;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.8);
+
+    transform: scale(.8);
+
+    transition: .4s ease;
+
+    cursor: zoom-out;
+}
+
+
+.photo-zoom.show img {
+    transform: scale(1);
+}
+
+
+/* Tombol X */
+
+.close-zoom {
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+
+.close-zoom:hover {
+    background:
+        rgba(255,255,255,.18);
+
+    transform: rotate(90deg);
+}
+
+
+/* Foto asli bisa diklik */
+
+.photo-card img,
+.mini-photo img {
+    cursor: zoom-in;
+
+    transition: .4s ease;
+}
+
+
+.photo-card img:hover,
+.mini-photo img:hover {
+    transform: scale(1.03);
+}
+/* =========================
+   TOMBOL BACK
+========================= */
+
+.back-btn {
+    position: fixed;
+
+    left: 25px;
+    bottom: 25px;
+
+    z-index: 500;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(15,20,40,.75);
+
+    backdrop-filter: blur(12px);
+
+    color: #dce2ff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(-15px);
+
+    transition: .35s ease;
+}
+
+
+/* muncul setelah halaman pertama */
+
+.back-btn.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+.back-btn:hover {
+    background: rgba(120,135,220,.2);
+
+    border-color:
+        rgba(170,180,255,.35);
+
+    transform: translateX(-3px);
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: page-out-left 0.65s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+::view-transition-new(root) {
+    animation: page-in-right 0.65s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes page-out-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes page-in-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+html[data-direction="back"]::view-transition-old(root) {
+    animation: page-out-right 0.65s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+html[data-direction="back"]::view-transition-new(root) {
+    animation: page-in-left 0.65s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes page-out-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes page-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

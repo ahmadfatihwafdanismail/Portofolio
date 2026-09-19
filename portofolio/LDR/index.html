@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Kita, Dari Jauh</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+    <div class="moon"></div>
+
+
+    <!-- Musik -->
+    <audio id="music" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+<button id="backBtn" class="back-btn" onclick="previousPage()">
+    ← Kembali
+</button>
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+        ♪
+    </button>
+
+
+    <!-- =========================
+         HALAMAN 1
+    ========================== -->
+
+    <section class="page active">
+
+        <div class="content">
+
+            <div class="tiny">
+                FOR YOU
+            </div>
+
+            <h1>
+                Untuk kamu,<br>
+                yang jauh di sana.
+            </h1>
+
+            <p>
+                Sebelum kamu membaca ini,
+                coba ingat kembali semua
+                hal kecil yang pernah kita lalui.
+            </p>
+
+            <button onclick="nextPage()">
+                Mulai perjalanan →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 2
+    ========================== -->
+
+    <section class="page">
+
+        <div class="memory-page">
+
+            <div class="memory-text">
+
+                <span>
+                    OUR MEMORIES
+                </span>
+
+                <h1>
+                    Ternyata,<br>
+                    kita sudah sejauh ini.
+                </h1>
+
+                <p>
+                    Dari awalnya cuma ngobrol,
+                    bercanda, ketawa bareng...
+                    sampai akhirnya ada begitu
+                    banyak cerita yang tersimpan.
+                </p>
+
+                <button onclick="nextPage()">
+                    Lihat lagi →
+                </button>
+
+            </div>
+
+
+            <div class="photo-card rotate-left">
+
+                <img src="foto1.jpg" alt="Kenangan kita" onclick="zoomPhoto(this)">
+                <div class="caption">
+                    sebuah kenangan
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 3
+    ========================== -->
+
+    <section class="page">
+
+        <div class="memory-page reverse">
+
+            <div class="photo-card rotate-right">
+
+                <img src="foto2.jpg" alt="Kenangan kita" onclick="zoomPhoto(this)">
+
+                <div class="caption">
+                    waktu yang ingin kuulang
+                </div>
+
+            </div>
+
+
+            <div class="memory-text">
+
+                <span>
+                    LITTLE MOMENTS
+                </span>
+
+                <h1>
+                    Hal-hal kecil<br>
+                    ternyata jadi berharga.
+                </h1>
+
+                <p>
+                    Mungkin saat itu kita menganggapnya
+                    biasa saja.
+                    <br><br>
+
+                    Tapi sekarang, ketika jarak
+                    memisahkan kita, aku justru sering
+                    merindukan hal-hal sederhana itu.
+                </p>
+
+                <button onclick="nextPage()">
+                    Dan sekarang...
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 4
+    ========================== -->
+
+    <section class="page">
+
+        <div class="content">
+
+            <div class="label">
+                DISTANCE
+            </div>
+
+            <h1>
+                Sekarang kita jauh.
+            </h1>
+
+
+            <div class="photo-strip">
+
+                <div class="mini-photo">
+                    <img src="foto3.jpg" alt="Kenangan kita" onclick="zoomPhoto(this)">
+                </div>
+
+                <div class="mini-photo middle">
+                    <img src="foto4.jpg" alt="Kenangan kita" onclick="zoomPhoto(this)">
+                </div>
+
+                <div class="mini-photo">
+                    <img src="foto5.jpg" alt="Kenangan kita" onclick="zoomPhoto(this)">
+                </div>
+
+            </div>
+
+
+            <p>
+                Dulu kita bisa bertemu kapan saja.
+                <br>
+
+                Sekarang kita hanya bisa melihat
+                kenangan yang pernah kita buat.
+            </p>
+
+            <button onclick="nextPage()">
+                Tapi aku percaya...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 5
+    ========================== -->
+
+    <section class="page">
+
+        <div class="content">
+
+            <div class="label">
+                SAME SKY
+            </div>
+
+            <h1>
+                Kamu di sana.<br>
+                Aku di sini.
+            </h1>
+
+            <p>
+                Mungkin kita tidak berada
+                di tempat yang sama.
+                <br><br>
+
+                Tapi setiap kali aku melihat
+                langit malam, aku selalu ingat kamu.
+                <br><br>
+
+                Karena mungkin...
+                kita sedang melihat bulan yang sama.
+            </p>
+
+            <div class="quote">
+                “Jarak cuma memisahkan tempat,
+                bukan perasaan.”
+            </div>
+
+            <button onclick="nextPage()">
+                Sampai suatu hari nanti...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 6
+    ========================== -->
+
+    <section class="page">
+
+        <div class="content final">
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <div class="label">
+                UNTIL WE MEET AGAIN
+            </div>
+
+            <h1>
+                Aku tetap memilih kamu.
+            </h1>
+
+            <p>
+                Terima kasih sudah menjadi
+                bagian dari begitu banyak
+                kenangan indah dalam hidupku.
+                <br><br>
+
+                Jangan takut dengan jarak.
+                <br>
+
+                Karena aku masih di sini.
+                <br>
+
+                Menunggu hari ketika kita
+                bisa bertemu lagi.
+                <br><br>
+
+                <strong>
+                    Sampai saat itu tiba,
+                    jaga diri baik-baik ya. ❤️
+                </strong>
+            </p>
+
+            <div class="signature">
+                — dari seseorang yang merindukanmu
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- PHOTO ZOOM -->
+
+<div id="photoZoom" class="photo-zoom" onclick="closeZoom()">
+
+    <button class="close-zoom" onclick="closeZoom()">×</button>
+
+    <img id="zoomedPhoto" src="" alt="Foto diperbesar">
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
