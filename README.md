@@ -34,10 +34,8 @@ Halo! Saya Ahmad Fatih, seorang yang berfokus di bidang pembuatan film (*filmmak
 
 ## 📬 Kontak & Media Sosial
 
-- **Website:** [namawebsite.com](https://yourwebsite.com)
-- **Instagram:** [@username](https://instagram.com)
-- **LinkedIn:** [Ahmad Fatih](https://linkedin.com)
-- **Email:** email@example.com
+- **Instagram:** [ahmaddfatihh]([https://instagram.com](https://www.instagram.com/ahmaddfatihh/)]
+- **Email:** nasigoreng5ksedap@gmail.com
 
 ---
 *Terima kasih telah berkunjung!*
