@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Something ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- DEKORASI -->
+    <div class="sparkle">✦</div>
+    <div class="sparkle s2">✧</div>
+    <div class="sparkle s3">♡</div>
+    <div class="sparkle s4">✦</div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+
+    <!-- MUSIK -->
+    <audio id="music" loop>
+        <source src="./music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()">
+        🎵 <span id="musicText">Play Music</span>
+    </button>
+
+
+    <!-- NAVIGASI -->
+    <nav>
+
+        <button onclick="showPage('home')">
+            ♡
+        </button>
+
+        <button onclick="showPage('story')">
+            Story
+        </button>
+
+        <button onclick="showPage('photos')">
+            Photos
+        </button>
+
+        <button onclick="showPage('message')">
+            Message
+        </button>
+
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+        <div class="home">
+
+            <div class="mini-heart">
+                ♡
+            </div>
+
+            <p class="welcome">
+                a little website made with love
+            </p>
+
+            <h1>
+                For Someone
+                <br>
+                <span>Special ♡</span>
+            </h1>
+
+            <p class="intro">
+                There are some things that are
+                difficult to say directly...
+                so I made this instead.
+            </p>
+
+            <button class="main-btn" onclick="showPage('story')">
+                Let's Begin ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section id="story" class="page">
+
+        <div class="container">
+
+            <p class="label">
+                ✿ 01 — OUR LITTLE STORY
+            </p>
+
+            <h2>
+                It all started
+                <br>
+                <span>with something small.</span>
+            </h2>
+
+
+            <div class="story-card">
+
+                <div class="card-decoration">
+                    ✿
+                </div>
+
+                <p>
+                    Aku nggak tahu kapan tepatnya
+                    semuanya mulai terasa berbeda.
+                </p>
+
+                <p>
+                    Mungkin dari percakapan sederhana,
+                    perhatian kecil, atau hanya karena
+                    senyummu.
+                </p>
+
+                <p>
+                    Tapi sejak saat itu,
+                    ada seseorang yang diam-diam
+                    selalu berhasil membuat hariku
+                    terasa lebih menyenangkan.
+                </p>
+
+                <div class="signature">
+                    — someone who cares ♡
+                </div>
+
+            </div>
+
+
+            <button class="main-btn" onclick="showPage('photos')">
+                See the memories →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOTO -->
+    <section id="photos" class="page">
+
+        <div class="container">
+
+            <p class="label">
+                ✿ 02 — LITTLE MEMORIES
+            </p>
+
+            <h2>
+                A few moments
+                <br>
+                <span>worth remembering.</span>
+            </h2>
+
+
+            <div class="photo-area">
+
+                <div class="polaroid p1">
+
+                    <div class="photo">
+                        <img src="./foto/foto1.jpg" alt="Foto 1">
+                    </div>
+
+                    <p>
+                        this one ♡
+                    </p>
+
+                </div>
+
+
+                <div class="polaroid p2">
+
+                    <div class="photo">
+                        <img src="./foto/foto2.jpg" alt="Foto 2">
+                    </div>
+
+                    <p>
+                        little happiness
+                    </p>
+
+                </div>
+
+
+                <div class="polaroid p3">
+
+                    <div class="photo">
+                        <img src="./foto/foto3.jpg" alt="Foto 3">
+                    </div>
+
+                    <p>
+                        just because ✿
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="main-btn" onclick="showPage('message')">
+                One more thing →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+    <section id="message" class="page">
+
+        <div class="container message-container">
+
+            <p class="label">
+                ✿ 03 — A LITTLE MESSAGE
+            </p>
+
+
+            <div class="letter">
+
+                <div class="letter-top">
+                    ♡
+                </div>
+
+                <h2>
+                    Dear
+                    <br>
+                    <span>You.</span>
+                </h2>
+
+
+                <p>
+                    Kalau kamu sampai di bagian ini,
+                    berarti kamu sudah melihat
+                    semuanya.
+                </p>
+
+                <p>
+                    Aku cuma ingin mengatakan
+                    satu hal sederhana...
+                </p>
+
+
+                <div class="highlight">
+                    Thank you for being you. ♡
+                </div>
+
+
+                <p>
+                    Terima kasih sudah pernah hadir,
+                    membuat tersenyum, dan menjadi
+                    bagian kecil dari sebuah cerita
+                    yang akan selalu aku ingat.
+                </p>
+
+
+                <p class="last">
+                    Semoga kamu selalu bahagia,
+                    di mana pun kamu berada.
+                </p>
+
+
+                <div class="signature">
+                    With love ♡
+                </div>
+
+            </div>
+
+
+            <button class="main-btn" onclick="showPage('home')">
+                ↻ Back to beginning
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
